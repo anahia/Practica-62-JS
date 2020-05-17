@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<!--esta es mi practica 62-->
+
+<head>
+    <title>Practica 62</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <form method="post" action="procesar.php" id="form1">
+        Enter name:
+        <input type="text" id="user" name="user" size="25">
+        <br> Enter Password:
+        <input type="password" id="clave" name="clave" size="25">
+        <br>
+        <input type="submit" id="confirm" name="confirm" value="Confirm">
+    </form>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', start, false);
+
+        function start() {
+            document.getElementById("form1").addEventListener('submit', validar, false);
+        }
+
+        function validar(evt) {
+            var user;
+            var pass;
+            user = document.getElementById("user").value;
+            pass = document.getElementById("password").value;
+            if (user.length == 0 || pass.length == 0) {
+                alert('The name or password is empty.');
+                evt.preventDefault();
+            }
+        }
+    </script>
+
+</body>
+
+</html>
